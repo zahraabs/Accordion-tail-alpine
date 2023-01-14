@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./build/tailwind.css">
+</head>
+<body class=" bg-blue-500 flex justify-center items-center h-screen">
+ <div class="w-full bg-white max-w-md p-4 rounded-xl flex flex-col gap-y-2">
+    <!-- Accordion 1-->
+    <div x-data="{accr:false}">
+        <!-- Header -->
+        <header @click="accr=!accr" class="bg-blue-500 text-white p-2 rounded-lg cursor-pointer flex justify-between">
+            <span>Frontend VS Backend?!</span>
+            <svg :class="accr ? 'rotate-180' : ''" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-all duration-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>              
+        </header>
+        <div x-show="accr" class="p-2 bg-gray-200 mt-1 rounded-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, assumenda officia placeat eum possimus aliquid ad quod asperiores sed in facilis commodi tempora quia qui?
+        </div>
+    </div>
+
+    <!-- Accordion 2 -->
+    <div x-data="{accr:false}" >
+        <!-- Header -->
+        <header @click="accr=!accr" class="bg-blue-500 text-white p-2 rounded-lg cursor-pointer flex justify-between">
+            <span>Frontend VS Backend?!</span>
+            <svg :class="accr ? 'rotate-180' : '' " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-all duration-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>              
+        </header>
+        <div x-show="accr" class="p-2 bg-gray-200 mt-1 rounded-lg">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, assumenda officia placeat eum possimus aliquid ad quod asperiores sed in facilis commodi tempora quia qui?
+        </div>
+    </div>
+ </div>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>
